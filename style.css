@@ -1,0 +1,24 @@
+*   {
+    padding: auto;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+#Fighter    {
+    background-color: #e25822;
+}
+
+#Opponent {
+    background-color: #061f8f;
+}
+
+h1 {
+    padding: 30px;
+    text-align: center;
+    font-size: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.mid   {
+    display: inline-block;
+}
