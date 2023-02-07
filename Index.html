@@ -11,22 +11,28 @@
 
 <body id = "Fighter">
     <h1>Choose Your Fighter!!!</h1>
-    <div class="mid">
-        <h2>Faust</h2>
-        <img src="Images\archive_faust.jpg" alt="Faust">
-    </div>
-    <div class="mid">
-        <h2>May</h2>
-        <img src="Images\archive_may.jpg" alt="May">
-    </div>
-    <div class="mid">
-        <h2>Happy Chaos</h2>
-        <img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos">
-    </div>
-    <div class="mid">
-        <h2>Baiken</h2>\
-        <img src="Images\archive_baiken.jpg" alt="Baiken">
-    </div>
+    <form> 
+        <div class="mid">
+            <h2>Faust</h2>
+            <input type="radio" id="FA" name="Fighter" value="FA">
+            <label for="FA"><img src="Images\archive_faust.jpg" alt="Faust"></label>
+        </div>
+        <div class="mid">
+            <h2>May</h2>
+            <input type="radio" id="MA" name="Fighter" value="MA">
+            <label for="MA"><img src="Images\archive_may.jpg" alt="May"></label>
+        </div>
+        <div class="mid">
+            <h2>Happy Chaos</h2>
+            <input type="radio" id="HC" name="Fighter" value="HC">
+            <label for="HC"><img src="Images\archive_happy_chaos.jpg" alt="Happy Chaos"></label>
+        </div>
+        <div class="mid">
+            <h2>Baiken</h2>
+            <input type="radio" id="BA" name="Fighter" value="BA">
+            <label for="BA"><img src="Images\archive_baiken.jpg" alt="Baiken"></label>
+        </div>
+    </form>    
     <button id = "pickOpponent">Select Opponent</button>
     <script src="script.js"></script>
 </body>
