@@ -15,6 +15,14 @@
 #Match {
     background-color: rgba(212, 12, 12, 0.966);
 }
+
+#reset {
+    position: absolute;
+    bottom: 10px;
+    right: 88%;
+    margin-left: -104.5px;
+}
+
 button {
     display: flex;
     justify-content: center;
@@ -22,7 +30,7 @@ button {
     margin-top: 50px;
     font-size: 40px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   }
+}
 
 h1 {
     padding: 30px;
@@ -39,6 +47,11 @@ h2 {
     display: inline-block;
 }
 
+.opponent-buttons{
+    display: flex;
+    justify-content: center;
+}
+
 .input-hidden{
     position: absolute;
     left: -9999px;
@@ -47,11 +60,11 @@ h2 {
 input[type="radio"]:checked + label > img {
     border: 1px solid rgb(0, 0,0);
     box-shadow: 0 0 3px 3px rgb(0, 0,0);
-  }
-  
-  input[type="radio"] + label > img {
+}
+
+input[type="radio"] + label > img {
     border: 1px rgb(0, 0, 0);
     padding: 10px;
-  
+
     transition: 500ms all;
-  }
+}
