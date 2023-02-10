@@ -1,27 +1,28 @@
-const faust = {
+const FA = {
   name: "Faust",
   value: 5
 };
-const may = {
+const MA = {
   name: "May",
   value: 5
 };
-const hc = {
+const HC = {
   name: "Happy Chaos",
   value: 7
 };
-const baiken = {
+const BA = {
   name: "Baiken",
   value: 3
 };
 
-document.getElementById("pickOpponent").addEventListener("click", function() {
-    try {
-      window.location.href = "http://127.0.0.1:5500/Opponent.html";
-    } catch (error) {
-      console.error(error);
+function displayFighter(){
+  var fighter = document.getElementsByName('FighterSelect');
+  for (var i = 0; i < fighter.length; i++) {
+    if(fighter[i].checked){
+      document.getElementById("result").innerHTML = "You choose " + fighter[i].value;
     }
-  });
+  }
+}
 
 function whoseBetter(a, b){
   return a.value > b.value 
@@ -30,13 +31,7 @@ function whoseBetter(a, b){
     ? b.name + " wins!!!" 
     : "Draw!!";
 }
-/* For when it goes live
-let person = prompt("Select your character:");
-let opponent = prompt("Select your opponent:");
-8?
-*/
 
-//get to the command line
 const person = process.argv[2];
 const opponent = process.argv[3];
 console.log(`Your character: ${person}`);
