@@ -23,6 +23,15 @@
     margin-left: -104.5px;
 }
 
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 button {
     display: flex;
     justify-content: center;

@@ -1,48 +1,68 @@
-const faust = {
+/*const FA = {
   name: "Faust",
   value: 5
 };
-const may = {
+const MA = {
   name: "May",
   value: 5
 };
-const hc = {
+const HC = {
   name: "Happy Chaos",
   value: 7
 };
-const baiken = {
+const BA = {
   name: "Baiken",
   value: 3
-};
+};*/
 
-document.getElementById("pickOpponent").addEventListener("click", function() {
-    try {
-      window.location.href = "http://127.0.0.1:5500/Opponent.html";
-    } catch (error) {
-      console.error(error);
+var fighter = document.getElementsByName('FighterSelect');
+var players = [];
+
+//const player = document.querySelector("#pickOpponent"); //for moving on to the select opponent screen
+// opponent = document.querySelector("#startMatch"); //for moving on to the fight screen
+
+/*function setFighter(name) {
+  document.cookie = ${name};
+}*/
+
+//Display the user's choice in an alert box when clicking the button
+function collect1() {
+  for (var i = 0; i < fighter.length; i++){
+    if (fighter[i].checked) {
+      alert("You have already picked " + fighter[i].value);
     }
-  });
+  }
+}
 
-function whoseBetter(a, b){
+//Collect in the console what the user chose
+function collect2() {
+  for (var i = 0; i < fighter.length; i++){
+    if (fighter[i].checked) {
+      document.cookie = fighter[i].value;
+      console.log(document.cookie);
+    }
+  }
+}
+
+function getCollect2(){
+  const cDecoded = decodeURIComponent(document.cookie);
+  console.log(cDecoded);
+}
+
+//Display the user's choice on screen 
+function displayFighter(){
+  for (var i = 0; i < fighter.length; i++) {
+    if(fighter[i].checked){
+      document.getElementById("result").innerHTML = "You choose " + fighter[i].value;
+    }
+  }
+}
+
+//Determine who won the fight
+function whosBetter(a, b){
   return a.value > b.value 
     ? a.name + " wins!!!" 
     : b.value > a.value  
     ? b.name + " wins!!!" 
     : "Draw!!";
 }
-/* For when it goes live
-let person = prompt("Select your character:");
-let opponent = prompt("Select your opponent:");
-8?
-*/
-
-//get to the command line
-const person = process.argv[2];
-const opponent = process.argv[3];
-console.log(`Your character: ${person}`);
-console.log(`Your opponent: ${opponent}`);
-
-
-console.log(whoseBetter(person, opponent));
-
-
