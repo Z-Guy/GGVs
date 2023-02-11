@@ -16,6 +16,7 @@ const BA = {
 };*/
 
 var fighter = document.getElementsByName('FighterSelect');
+var players = [];
 
 //const player = document.querySelector("#pickOpponent"); //for moving on to the select opponent screen
 // opponent = document.querySelector("#startMatch"); //for moving on to the fight screen
@@ -33,6 +34,20 @@ function collect1() {
   }
 }
 
+//Collect in the console what the user chose
+function collect2() {
+  for (var i = 0; i < fighter.length; i++){
+    if (fighter[i].checked) {
+      document.cookie = fighter[i].value;
+      console.log(document.cookie);
+    }
+  }
+}
+
+function getCollect2(){
+  const cDecoded = decodeURIComponent(document.cookie);
+  console.log(cDecoded);
+}
 
 //Display the user's choice on screen 
 function displayFighter(){
